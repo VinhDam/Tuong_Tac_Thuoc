@@ -1,0 +1,45 @@
+﻿<Window x:Class="Tuong_Tac_Thuoc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tuong_Tac_Thuoc"
+        mc:Ignorable="d"
+        Title="Tương tác thuốc" Height="468" Width="625">
+    <TabControl Margin="10,10,10,7">
+        <TabItem Header="Tương tác" Margin="-2,-2,-2,0">
+            <Grid Height="383" Margin="0,0,1,0">
+                <Grid.ColumnDefinitions
+    >
+                    <ColumnDefinition
+    />
+                </Grid.ColumnDefinitions>
+                <Label Margin="10,45,0,0" Content="Chọn các file thẻ kho" HorizontalAlignment="Left" Width="140" Height="29" VerticalAlignment="Top"/>
+                <Button
+                x:Name="btn_DuLieu" Margin="0,10,9,0" Content="Chọn file" Click="btn_DuLieu_Click" HorizontalAlignment="Right" Width="164" Height="30" VerticalAlignment="Top"/>
+                <Button x:Name="btn_Kho" Margin="0,45,9,0" Content="Chọn files" Click="btn_Kho_Click" HorizontalAlignment="Right" Width="164" Height="69" VerticalAlignment="Top"/>
+                <TextBox TextWrapping="Wrap" x:Name="tb_DuLieu" Margin="141,10,179,0" FontSize="16" Height="30" VerticalAlignment="Top"/>
+                <ListBox x:Name="lb_Kho" Margin="141,45,179,0" FontSize="14" Height="69" VerticalAlignment="Top"/>
+                <Label Margin="10,119,0,0" Content="Từ ngày" HorizontalAlignment="Left" Width="89" Height="24" VerticalAlignment="Top"/>
+                <DatePicker x:Name="dtp_FromDate" Margin="141,119,0,0" HorizontalAlignment="Left" Width="102" Height="24" VerticalAlignment="Top"/>
+                <Label VerticalAlignment="Top" Margin="10,148,0,0" Height="24" Content="Đến ngày" HorizontalAlignment="Left" Width="98"/>
+                <DatePicker x:Name="dtp_ToDate" Margin="141,148,0,0" HorizontalAlignment="Left" Width="102" Height="24" VerticalAlignment="Top"/>
+                <Button Margin="0,0,143,10" Content="Tương tác" Click="btn_KiemTraTuongTac_Click" HorizontalAlignment="Right" Width="128" Height="38" VerticalAlignment="Bottom"/>
+                <Button Margin="0,0,10,10" Content="Cancel" Click="btn_Cancel_Click" HorizontalAlignment="Right" Width="128" Height="38" VerticalAlignment="Bottom"/>
+                <Button Margin="0,0,276,10" Content="Đếm bệnh nhân" Click="btn_CountThuoc_Click" HorizontalAlignment="Right" Width="128" Height="38" VerticalAlignment="Bottom"/>
+                <Label Margin="10,11,0,0" Content="Chọn file Dữ liệu" HorizontalAlignment="Left" Width="140" Height="29" VerticalAlignment="Top"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Gộp files" Margin="-2,-2,-2,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Chọn file cần gộp" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <ListBox x:Name="lb_FileGop" Margin="118,10,121,0" Height="67" VerticalAlignment="Top"/>
+                <Button Content="Chọn files" Margin="0,10,10,0" VerticalAlignment="Top" Click="btn_FileCanGop_Click" Height="67" HorizontalAlignment="Right" Width="106"/>
+                <Button Content="Gộp files" Margin="0,0,10,10" Click="btn_GopFiles_Click" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="106"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
